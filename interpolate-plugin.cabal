@@ -1,0 +1,32 @@
+cabal-version:      3.0
+name:               interpolate-plugin
+version:            0.1.0.0
+synopsis:
+
+license:            NONE
+author:             Danil Berestov
+maintainer:         goosedb@yandex.ru
+
+extra-source-files: CHANGELOG.md
+
+library
+    exposed-modules:  InterpolatePlugin, PluginFS, PluginS
+
+    build-depends:    base ^>=4.14.3.0, 
+                      uniplate, 
+                      ghc, 
+                      megaparsec, 
+                      ghc-paths, 
+                      parser-combinators
+    hs-source-dirs:   src
+    default-language: Haskell2010
+    ghc-options: -Wall
+
+
+
+test-suite interpolate-plugin-test
+    default-language: Haskell2010
+    type:             exitcode-stdio-1.0
+    hs-source-dirs:   test
+    main-is:          MyLibTest.hs
+    build-depends:    base ^>=4.14.3.0
