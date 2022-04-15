@@ -49,7 +49,6 @@ import GhcPlugins
       RdrName(Orig),
       Hsc,
       FastString,
-      mkFastStringByteString,
       defaultPlugin,
       HasDynFlags(getDynFlags),
       unpackFS,
@@ -64,7 +63,6 @@ import GhcPlugins
 import Data.String (fromString)
 import PrelNames (gHC_BASE, gHC_SHOW, fromString_RDR)
 import Data.Functor ((<&>), ($>), void)
--- import Data.ByteString (ByteString)
 import Control.Applicative as Applicative ((<|>), Alternative (empty))
 import Control.Monad (forM, when)
 import Lexer (unP, mkPStatePure, mkParserFlags, ParseResult (POk, PFailed), getErrorMessages)
